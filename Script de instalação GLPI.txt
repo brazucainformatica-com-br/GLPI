@@ -1,1 +1,7 @@
 Instalação automatizada para Ubuntu Server 22
+
+Execute o script glpi-install-10-0-6.sh no servidor linux
+utilizando o comando:
+sudo chmod +x glpi-install-10-0-6.sh
+seguido de 
+sudo ./glpi-install-10-0-6.sh
