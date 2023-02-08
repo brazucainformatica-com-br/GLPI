@@ -3,9 +3,6 @@ echo "Atualizar e realizar upgrade no sistema..."
 apt update -y
 apt upgrade -y
 
-echo "Instalação dos pacotes..."
-apt install -y xz-utils bzip2 unzip curl
-
 echo "Instalação do WebService..."
 apt install -y apache2 libapache2-mod-php php-soap php-cas php php-{apcu,cli,common,curl,gd,imap,ldap,mysql,xmlrpc,xml,mbstring,bcmath,intl,zip,bz2}
 
