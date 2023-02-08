@@ -26,14 +26,14 @@ apt install -y mariadb-server
 
 echo "Criação do banco de dados..."
 mysql -e "create database glpidb character set utf8"
-mysql -e "create user 'glpi'@'localhost' identified by '123456789'"
+mysql -e "create user 'glpi'@'localhost' identified by '1oGFbvEPHA1yC87'"
 mysql -e "grant all privileges on glpidb.* to 'glpi'@'localhost' with grant option";
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -p -u root mysql
-mysql -e "GRANT SELECT ON mysql.time_zone_name TO 'glpi'@'localhost';"
+mysql -e "GRANT SELECT ON mysql.time_zone_name TO 'glpi'@'localhost'";
 mysql -e "FLUSH PRIVILEGES;"
 
 echo "Instalação do GLPI..."
-php /var/www/html/glpi/bin/console glpi:database:install --db-host=localhost --db-name=glpidb --db-user=glpi --db-password=123456
+php /var/www/html/glpi/bin/console glpi:database:install --db-host=localhost --db-name=glpidb --db-user=glpi --db-password=1oGFbvEPHA1yC87
 
 echo "Reajustar permissões..."
 chown www-data. /var/www/html/glpi/files -Rf
