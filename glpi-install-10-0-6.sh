@@ -3,7 +3,7 @@ echo "Atualizar e realizar upgrade no sistema..."
 apt update -y
 apt upgrade -y
 
-echo "Instalação dos pacotes"
+echo "Instalação dos pacotes..."
 apt install -y xz-utils bzip2 unzip curl
 
 echo "Instalação do WebService..."
