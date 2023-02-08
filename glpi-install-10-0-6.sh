@@ -3,11 +3,8 @@ echo "Atualizar e realizar upgrade no sistema..."
 apt update -y
 apt upgrade -y
 
-
 echo "Instalação dos pacotes"
 apt install -y xz-utils bzip2 unzip curl
-
-
 
 echo "Instalação do WebService..."
 apt install -y apache2 libapache2-mod-php php-soap php-cas php php-{apcu,cli,common,curl,gd,imap,ldap,mysql,xmlrpc,xml,mbstring,bcmath,intl,zip,bz2}
@@ -37,7 +34,6 @@ php /var/www/html/glpi/bin/console glpi:database:install --db-host=localhost --d
 
 echo "Reajustar permissões..."
 chown www-data. /var/www/html/glpi/files -Rf
-
 
 echo "habilitando apache2 no inicializador ..."
 systemctl enable apache2
