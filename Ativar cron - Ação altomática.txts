@@ -7,6 +7,9 @@ sudo crontab -e
 3. Crie a tarefa inserindo a seguinte linha para executar a ação a cada minuto:
 
 1 * * * * php /var/www/html/glpi/front/cron.php &>/dev/null
+1 * * * * php /var/www/html/glpi/front/cron.php --force mailgate
+1 * * * * php /var/www/html/glpi/front/cron.php --force queuedmail
+
 
 4. Salve as alterações.
 
