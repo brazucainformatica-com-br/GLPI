@@ -1,0 +1,18 @@
+Como alterar o endereço para um novo certificado CertBot
+Acessar a pasta repositório para os certificados
+# cd /etc/letsencrypt/live/
+Com o comando ls verificar quais certificados já estão instalados no servidor
+# ls
+Utilize o comando rm -r para remover os certificados indesejados
+# rm -r nomedocertifcado
+Comente as linhas referente ao domínio padrão para renovação do certificado
+# nano /etc/apache2/sites-enabled/000-default-le-ssl.conf
+Desabilite temporariamente o ufw
+# ufw disable
+Em seguida solicite o novo certificado para o site desejado
+# certbot –apache 
+Siga os passos informando o novo domínio
+Em seguida habilite novamente o ufw
+# ufw disable
+Para segurança do servidor deixe apenas as portas necessárias abertas
+Sugestão apenas porta 443 e 22, no meu caso ativo a 22 apenas quando preciso acessar o servidor através de linha de comando local.
