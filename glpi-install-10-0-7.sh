@@ -7,7 +7,7 @@ echo "Instalação do WebService..."
 apt install -y apache2 libapache2-mod-php php-soap php-cas php php-{apcu,cli,common,curl,gd,imap,ldap,mysql,xmlrpc,xml,mbstring,bcmath,intl,zip,bz2}
 
 echo "Baixando e descompactando o GLPI na pasta /var/www/html"
-wget -O- https://github.com/glpi-project/glpi/releases/download/10.0.6/glpi-10.0.6.tgz | tar -zxv -C /var/www/html/
+wget -O- https://github.com/glpi-project/glpi/releases/download/10.0.7/glpi-10.0.7.tgz | tar -zxv -C /var/www/html/
 
 echo "Configurar permissões no diretório..."
 
