@@ -1,0 +1,9 @@
+De qualquer forma, é possível desabilitar completamente a mensagem editando glpi/src/System/Requirement/SafeDocumentRoot.php e adicionando um "return;" instrução logo após "verificação de função protegida ()":
+
+  [...]
+    protected function check()                                                                                                                                                                 
+    {                                                                                                                                                                                         
+      return; // <- Add this here
+        if (isCommandLine()) {                                                                                                                                                                 
+            $this->out_of_context = true;                                                                                                                                                      
+  [...]
